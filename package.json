@@ -1,0 +1,12 @@
+{
+  "name": "desktop-plus-zh-cn",
+  "private": true,
+  "scripts": {
+    "audit": "node audit.mjs",
+    "test": "node --test test.mjs audit.test.mjs",
+    "test:installed-ui": "node test-installed-ui.cjs"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  }
+}

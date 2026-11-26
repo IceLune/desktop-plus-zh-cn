@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Desktop Plus 简体中文插件
+Comment=应用或恢复 Desktop Plus 汉化
+Exec=AppRun
+Icon=desktop-plus-zh-cn
+Terminal=false
+Categories=Utility;
