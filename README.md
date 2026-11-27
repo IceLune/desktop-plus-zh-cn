@@ -28,10 +28,10 @@ macOS 和 Linux 会优先借用 Desktop Plus 自带的运行时。工具提示�
 <details>
 <summary>从源码构建</summary>
 
-词表在 [`zh-CN.json`](zh-CN.json)。
+词表在 [`zh-CN.json`](zh-CN.json)，安装包版本取自 `package.json`。
 
 - Windows 运行 `./build-exe.ps1`。
-- 构建 DMG 和 AppImage 时，使用 Python 3.11 或更新版本并安装 `fs-explorer==0.5.0`，从 [AppImage Runtime 发布页](https://github.com/AppImage/type2-runtime/releases/tag/20251108) 下载 `runtime-x86_64` 和 `runtime-aarch64`，并将该版本的 `LICENSE` 保存为 `appimage-runtime-license.txt`。将这三个文件放在 `downloads` 下，再运行 `python build-unix-packages.py ./downloads ./dist/v0.1.0`。
+- 构建 DMG 和 AppImage 时，使用 Python 3.11 或更新版本并安装 `fs-explorer==0.5.0`，从 [AppImage Runtime 发布页](https://github.com/AppImage/type2-runtime/releases/tag/20251108) 下载 `runtime-x86_64` 和 `runtime-aarch64`，并将该版本的 `LICENSE` 保存为 `appimage-runtime-license.txt`。将这三个文件放在 `downloads` 下，再运行 `python build-unix-packages.py ./downloads ./dist/release`。
 
 </details>
 

@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import io
+import json
 import plistlib
 import re
 import shutil
@@ -136,13 +137,14 @@ def build_dmg(output: Path, work: Path, version: str, icon: bytes) -> Path:
 
 
 def build_appimage(downloads: Path, output: Path, work: Path, arch: str,
-                   runtime_arch: str, elf_machine: int, icon: bytes) -> Path:
+                   runtime_arch: str, elf_machine: int, version: str, icon: bytes) -> Path:
     resources = "usr/share/desktop-plus-zh-cn"
     payload: Payload = {}
     add_scripts(payload, resources)
     add_entrypoint(payload, "linux-apprun.sh", "AppRun")
-    add_bytes(payload, "desktop-plus-zh-cn.desktop",
-              (ROOT / "packaging/desktop-plus-zh-cn.desktop").read_text(encoding="utf-8-sig").encode("utf-8"))
+    desktop_entry = (ROOT / "packaging/desktop-plus-zh-cn.desktop").read_text(encoding="utf-8-sig")
+    desktop_entry = f"{desktop_entry.rstrip()}\nX-AppImage-Version={version}\n"
+    add_bytes(payload, "desktop-plus-zh-cn.desktop", desktop_entry.encode("utf-8"))
     add_bytes(payload, "desktop-plus-zh-cn.png", icon)
     add_bytes(payload, ".DirIcon", icon)
     add_entrypoint(payload, "unix-runtime.sh", f"{resources}/unix-runtime.sh")
@@ -183,10 +185,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("downloads", type=Path, help="Directory containing verified runtime inputs listed in the README")
     parser.add_argument("output", type=Path)
-    parser.add_argument("--version", default="0.1.0")
+    version = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))["version"]
+    parser.add_argument("--version", default=version)
     args = parser.parse_args()
     if not re.fullmatch(r"\d+\.\d+\.\d+", args.version):
-        parser.error("Use a three-part version, for example 0.1.0.")
+        parser.error("Use a three-part version, for example 0.1.1.")
 
     args.output.mkdir(parents=True, exist_ok=True)
     icon = (ROOT / "assets/icon-logo.png").read_bytes()
@@ -197,8 +200,8 @@ def main() -> None:
         work = Path(temporary)
         bundles = [
             build_dmg(work, work, args.version, icon),
-            build_appimage(args.downloads, work, work, "x64", "x86_64", 62, icon),
-            build_appimage(args.downloads, work, work, "arm64", "aarch64", 183, icon),
+            build_appimage(args.downloads, work, work, "x64", "x86_64", 62, args.version, icon),
+            build_appimage(args.downloads, work, work, "arm64", "aarch64", 183, args.version, icon),
         ]
         for bundle in bundles:
             if (args.output / bundle.name).exists():

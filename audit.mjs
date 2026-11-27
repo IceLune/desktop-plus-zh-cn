@@ -261,6 +261,11 @@ async function audit(directory, filter) {
     await readFile(new URL('./zh-CN.json', import.meta.url), 'utf8')
   )
   const match = catalogMatcher(catalog)
+  const reviewed = JSON.parse(
+    await readFile(new URL('./audit-reviewed.json', import.meta.url), 'utf8')
+  )
+  const reviewKey = (file, scope, text) => JSON.stringify([file, scope, text])
+  const reviewReasons = new Map(reviewed.map(({ file, scope, text, reason }) => [reviewKey(file, scope, text), reason]))
   const candidates = new Map()
   const occurrences = []
   const record = (file, contents) => {
@@ -274,6 +279,9 @@ async function audit(directory, filter) {
       occurrences.push({
         area, file, line, column, scope: location, text, catalogMatch,
         review: catalogMatch === 'missing' ? 'triage' : 'verify-context',
+        ...(catalogMatch === 'missing' && reviewReasons.has(reviewKey(file, location, text))
+          ? { reviewReason: reviewReasons.get(reviewKey(file, location, text)) }
+          : {}),
       })
       const id = area + '\n' + key(text)
       const candidate = candidates.get(id) ?? { area, text, references: [] }
@@ -328,6 +336,9 @@ async function audit(directory, filter) {
       return counts
     }, { exact: 0, pattern: 0, missing: 0 }),
     missing,
+    pendingEnglishOccurrences: occurrences.filter(entry =>
+      entry.catalogMatch === 'missing' && !entry.reviewReason && !/\p{Script=Han}/u.test(entry.text)
+    ),
     occurrences,
   }
 }

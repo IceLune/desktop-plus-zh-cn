@@ -1,0 +1,296 @@
+[
+  {
+    "file": "app/src/ui/changes/oversized-files-warning.tsx",
+    "scope": "OversizedFiles > render > Dialog[id=oversized-files] > DialogContent > p[className=recommendation] > LinkButton",
+    "text": "Git LFS",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-provider-dialog.tsx",
+    "scope": "EditCopilotBYOKProviderDialog > renderProviderSection > fieldset[className=copilot-byok-fieldset] > Row > Select > option",
+    "text": "Anthropic",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-provider-dialog.tsx",
+    "scope": "EditCopilotBYOKProviderDialog > renderProviderSection > fieldset[className=copilot-byok-fieldset] > Row > Select > option",
+    "text": "Azure",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot/copilot-disclaimer.tsx",
+    "scope": "CopilotDisclaimer > render > Dialog > @title",
+    "text": "GitHub Copilot",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-model-dialog.tsx",
+    "scope": "EditCopilotBYOKModelDialog > render > Dialog[id=edit-copilot-byok-model] > DialogContent > Row[className=copilot-byok-field] > TextBox > @placeholder",
+    "text": "GPT-4o",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-model-dialog.tsx",
+    "scope": "EditCopilotBYOKModelDialog > render > Dialog[id=edit-copilot-byok-model] > DialogContent > Row[className=copilot-byok-field] > p[className=copilot-byok-field-hint] > code",
+    "text": "llama3",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/copilot-app/copilot-app-not-found-dialog.tsx",
+    "scope": "CopilotAppNotFoundDialog > render > Dialog[id=copilot-app] > @title",
+    "text": "GitHub Copilot",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/lfs/initialize-lfs.tsx",
+    "scope": "InitializeLFS > renderRepositories > p > LinkButton",
+    "text": "Git LFS",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/lfs/initialize-lfs.tsx",
+    "scope": "InitializeLFS > renderRepositories > div > p > LinkButton",
+    "text": "Git LFS",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/preferences/advanced.tsx",
+    "scope": "Advanced > render > DialogContent > div[className=advanced-section] > div[id=use-external-credential-helper-description, className=settings-description] > p > LinkButton",
+    "text": "Git Credential Manager",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/preferences/integrations.tsx",
+    "scope": "Integrations > renderCopilotApp > fieldset > legend > h2",
+    "text": "GitHub Copilot",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/tutorial/tutorial-panel.tsx",
+    "scope": "TutorialPanel > render > div[className=tutorial-panel-component panel] > ol > TutorialStepInstructions > p[className=description] > LinkButton",
+    "text": "Atom",
+    "reason": "产品、工具或模型名称"
+  },
+  {
+    "file": "app/src/ui/add-repository/create-repository.tsx",
+    "scope": "CreateRepository > renderReadmeOverwriteWarning > Row > InputWarning[id=readme-overwrite-warning] > Ref",
+    "text": "README.md",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/changes/commit-message.tsx",
+    "scope": "renderScopeValue > span > em",
+    "text": "[includeIf]",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/history/commit-graph-sidebar.tsx",
+    "scope": "CommitGraphSidebar > commitGraph_getBranchGroupLabel",
+    "text": "origin ({…})",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/history/commit-graph-sidebar.tsx",
+    "scope": "CommitGraphSidebar > commitGraph_getBranchGroupLabel",
+    "text": "upstream ({…})",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/manage-remotes/add-remote-dialog.tsx",
+    "scope": "AddRemoteDialog > render > Dialog[id=add-remote] > DialogContent > Row > TextBox > @placeholder",
+    "text": "upstream",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/preferences/git.tsx",
+    "scope": "Git > renderDefaultBranchSetting > div[className=default-branch-component] > p[id=default-branch-description, className=settings-description] > Ref",
+    "text": "main",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/preferences/git.tsx",
+    "scope": "Git > renderDefaultBranchSetting > div[className=default-branch-component] > p[id=default-branch-description, className=settings-description] > Ref",
+    "text": "master",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/repository-settings/git-ignore.tsx",
+    "scope": "GitIgnore > render > DialogContent > p[id=ignored-files-description] > Ref",
+    "text": ".gitignore",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/tutorial/tutorial-panel.tsx",
+    "scope": "TutorialPanel > render > div[className=tutorial-panel-component panel] > ol > TutorialStepInstructions > p[className=description] > Ref",
+    "text": "README.md",
+    "reason": "Git 标识、文件名或配置项"
+  },
+  {
+    "file": "app/src/ui/cli-action/test-cli-action-dialog.tsx",
+    "scope": "TestCLIActionDialog > renderActiveTab > Row > TextBox > @placeholder",
+    "text": "/path/to/repository",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/cli-action/test-cli-action-dialog.tsx",
+    "scope": "TestCLIActionDialog > renderActiveTab > Row > TextBox > @placeholder",
+    "text": "main",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/clone-repository/clone-generic-repository.tsx",
+    "scope": "CloneGenericRepository > render > DialogContent[className=clone-generic-repository-content] > Row > TextBox > @label > div[className=clone-url-textbox-label] > p > Ref",
+    "text": "hubot/cool-repo",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/lib/author-input/author-input.tsx",
+    "scope": "AuthorInput > render > FocusContainer > AutocompletingInput > @placeholder",
+    "text": "@username",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/lib/configure-git-user.tsx",
+    "scope": "ConfigureGitUser > renderGitConfigForm > TextBox > @placeholder",
+    "text": "your-email@example.com",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/terms-and-conditions/terms-and-conditions.tsx",
+    "scope": "TermsAndConditions > render > Dialog[id=terms-and-conditions] > DialogContent > ol > li > LinkButton",
+    "text": "support@github.com",
+    "reason": "输入示例或联系邮箱"
+  },
+  {
+    "file": "app/src/ui/app.tsx",
+    "scope": "App > getWindowTitle",
+    "text": "{…} - Desktop Plus",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/autocompletion/autocompleting-text-input.tsx",
+    "scope": "AutocompletingTextInput > div",
+    "text": "&nbsp;",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/autocompletion/issues-autocompletion-provider.tsx",
+    "scope": "IssuesAutocompletionProvider > renderItem > div[className=issue]",
+    "text": "&nbsp;",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/diff/side-by-side-diff-row.tsx",
+    "scope": "SideBySideDiffRow > renderContent > div[className=content] > div[className=prefix]",
+    "text": "&nbsp;&nbsp;",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/diff/image-diffs/two-up.tsx",
+    "scope": "TwoUp > render > div[className=image-diff-container] > div[className=image-diff-two-up] > div[className=image-diff-previous] > div[className=image-diff-footer]",
+    "text": "px |",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/diff/image-diffs/two-up.tsx",
+    "scope": "TwoUp > render > div[className=image-diff-container] > div[className=image-diff-two-up] > div[className=image-diff-current] > div[className=image-diff-footer]",
+    "text": "px |",
+    "reason": "排版、单位或应用名模板"
+  },
+  {
+    "file": "app/src/ui/index.tsx",
+    "scope": "resizeLoopCompletedMessage",
+    "text": "ResizeObserver loop completed with undelivered notifications.",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/test-ui-components/test-ui-components.ts",
+    "scope": "showTestUI > showFakeThankYouPopup > .userContributions > .message",
+    "text": "[New] Added fake thank you dialog",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/timing.ts",
+    "scope": "onCompleted > message",
+    "text": "[Timing] {…} took {…}s",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/test-ui-components/test-ui-components.ts",
+    "scope": "showTestUI > showFakeThankYouBanner > userContributions > .message",
+    "text": "A totally awesome fix that fixes something - #123. Thanks!",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/test-ui-components/test-ui-components.ts",
+    "scope": "showTestUI > showFakeConfirmCommittingConflictedFiles > .context > .description",
+    "text": "Test description",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/test-ui-components/test-ui-components.ts",
+    "scope": "showTestUI > showFakeFilesTooLarge > .context > .description",
+    "text": "Test description",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/lib/test-ui-components/test-ui-components.ts",
+    "scope": "showTestUI > showFakeThankYouBanner > userContributions > .message",
+    "text": "You can now do this new thing that was added here - #456. Thanks!",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/multi-commit-operation/base-multi-commit-operation.tsx",
+    "scope": "BaseMultiCommitOperation > endFlowInvalidState > errorMessage",
+    "text": "[{…}] - Invalid state - {…} ended during {…}.",
+    "reason": "日志或测试数据"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} Bitbucket",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} Codeberg",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} Gitea",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} GitHub Enterprise",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} GitHub.com",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/preferences/accounts.tsx",
+    "scope": "Accounts > renderSignIn > CallToAction > @actionTitle",
+    "text": "{…} GitLab",
+    "reason": "已汉化登录动作拼接的平台名称"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-model-dialog.tsx",
+    "scope": "EditCopilotBYOKModelDialog > render > Dialog[id=edit-copilot-byok-model] > DialogContent > Row[className=copilot-byok-field] > TextBox > @placeholder",
+    "text": "gpt-4o",
+    "reason": "模型 ID 输入示例"
+  },
+  {
+    "file": "app/src/ui/copilot/edit-byok-model-dialog.tsx",
+    "scope": "EditCopilotBYOKModelDialog > render > Dialog[id=edit-copilot-byok-model] > DialogContent > Row[className=copilot-byok-field] > p[className=copilot-byok-field-hint] > code",
+    "text": "gpt-4o",
+    "reason": "模型 ID 输入示例"
+  }
+]
